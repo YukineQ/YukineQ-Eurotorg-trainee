@@ -126,20 +126,12 @@
       <HintPath>..\lib\RCWPF\2024.1.408.45.Trial\Telerik.Windows.Controls.Chart.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.Windows.Controls.Docking, Version=2024.1.408.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWPF\2024.1.408.45.Trial\Telerik.Windows.Controls.Docking.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Telerik.Windows.Controls.GridView, Version=2024.1.408.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
       <HintPath>..\lib\RCWPF\2024.1.408.45.Trial\Telerik.Windows.Controls.GridView.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.Input, Version=2024.1.408.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
       <HintPath>..\lib\RCWPF\2024.1.408.45.Trial\Telerik.Windows.Controls.Input.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.Navigation, Version=2024.1.408.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWPF\2024.1.408.45.Trial\Telerik.Windows.Controls.Navigation.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.VirtualGrid, Version=2024.1.408.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
@@ -159,44 +151,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Commands\GetRatesForDateCommand.cs" />
-    <Compile Include="Commands\ReadFromJsonCommand.cs" />
-    <Compile Include="Commands\SaveToJsonCommand.cs" />
-    <Compile Include="Commands\SelectRowForGraphCommand.cs" />
-    <Compile Include="Converters\DateConverter.cs" />
     <Compile Include="Helpers\ApiCall.cs" />
-    <Compile Include="Helpers\Publisher.cs" />
-    <Compile Include="Intefaces\ICommandBinding.cs" />
-    <Compile Include="Intefaces\IDialogService.cs" />
-    <Compile Include="Intefaces\IExRatesAPI.cs" />
-    <Compile Include="Intefaces\IMessageBoxService.cs" />
     <Compile Include="Intefaces\NotifyPropertyChanged.cs" />
-    <Compile Include="Service\Source.cs" />
-    <Compile Include="Models\Dynamics.cs" />
     <Compile Include="Models\Rate.cs" />
     <Compile Include="Service\Container.cs" />
-    <Compile Include="Service\DialogService.cs" />
     <Compile Include="Service\ExRatesAPI.cs" />
     <Compile Include="Service\ExRatesOptions.cs" />
-    <Compile Include="Service\JsonFileService.cs" />
-    <Compile Include="Service\MessageBoxService.cs" />
-    <Compile Include="Service\TraceService.cs" />
-    <Compile Include="ViewModel\DatePickerModelView.cs" />
-    <Compile Include="ViewModel\DynamicGraphViewModel.cs" />
-    <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\RateViewModel.cs" />
-    <Compile Include="View\DatePickerView.xaml.cs">
-      <DependentUpon>DatePickerView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\DynamicGraphView.xaml.cs">
-      <DependentUpon>DynamicGraphView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\OpenFileInfoView.xaml.cs">
-      <DependentUpon>OpenFileInfoView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\RatesView.xaml.cs">
-      <DependentUpon>RatesView.xaml</DependentUpon>
-    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -208,26 +169,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Themes\System.Windows.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="View\DatePickerView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\DynamicGraphView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\OpenFileInfoView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\RatesView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -258,7 +199,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ViewModel\OpenFileInfoViewModel.cs" />
+    <Folder Include="View\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

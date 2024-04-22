@@ -6,7 +6,7 @@
     <Application.Resources>
       <ResourceDictionary>
           <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/Themes/System.Windows.xaml" />
+                <telerik:Windows11ResourceDictionary />
             </ResourceDictionary.MergedDictionaries>
       </ResourceDictionary>
     </Application.Resources>

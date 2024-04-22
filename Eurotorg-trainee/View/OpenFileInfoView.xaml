@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="Eurotorg_trainee.View.OpenFileInfoView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Eurotorg_trainee.View"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:commands="clr-namespace:Eurotorg_trainee.Commands"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <StackPanel Orientation="Vertical" Margin="10" Visibility="{Binding Visibility}">
+        <TextBlock 
+            Text="Открыт файл:" 
+            HorizontalAlignment="Stretch" 
+            FontFamily="Segoe UI"
+            Margin="0,1,0,5"
+        />
+        <TextBlock 
+            Text="{Binding OpenFileName}" 
+            HorizontalAlignment="Stretch" 
+            FontFamily="Segoe UI"
+            Margin="0,1,0,5"
+        />
+        <telerik:RadButton
+            Command="commands:SaveToJsonCommand.Command"
+            CommandParameter="{Binding OpenFileName, Mode=OneWay}"
+            Content="Сохранить" 
+            Width="Auto"
+            Margin="0 10 0 0" 
+        />
+    </StackPanel>
+</UserControl>

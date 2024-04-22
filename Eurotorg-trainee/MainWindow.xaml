@@ -2,8 +2,33 @@
                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                 xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
-                Title="MainWindow" Height="350" Width="525">
+                xmlns:controls="clr-namespace:Eurotorg_trainee.View"
+                Title="MainWindow" WindowState="Maximized"> 
+    <Grid x:Name="LayoutRoot">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="240" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
         <Grid>
-                    
+            <Grid.RowDefinitions>
+                <RowDefinition Height="6*" />
+                <RowDefinition Height="4*" />
+            </Grid.RowDefinitions>
+
+            <Border>
+                <StackPanel Orientation="Vertical">
+                    <controls:DatePickerView />
+                    <controls:OpenFileInfoView />
+                </StackPanel>
+            </Border>
         </Grid>
+        <Grid Grid.Column="1" Margin="-1 0 0 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*" />
+                <RowDefinition Height="6*" />
+            </Grid.RowDefinitions>
+            <controls:DynamicGraphView />
+            <controls:RatesView Grid.Row="1" />
+        </Grid>
+    </Grid>
 </Window>
